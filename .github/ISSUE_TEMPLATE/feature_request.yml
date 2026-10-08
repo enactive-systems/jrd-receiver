@@ -1,0 +1,22 @@
+name: 機能の要望
+description: 追加や改善の提案
+labels: ["enhancement"]
+type: Feature
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 困っていること・やりたいこと
+      description: どんな場面で、何ができなくて困っているかを書いてください。
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: ほしい動き
+      description: 思い描いている動きがあれば書いてください。
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: いまの回避策
+      description: 別の方法でしのいでいれば書いてください。

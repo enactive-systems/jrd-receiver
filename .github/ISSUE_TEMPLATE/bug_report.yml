@@ -1,0 +1,74 @@
+name: 不具合の報告
+description: 動かない、表示がおかしい、落ちる、などの報告
+labels: ["bug"]
+type: Bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Issue は誰でも読めます。ライセンスキーや、購入時のメールアドレスは書かないでください。
+  - type: input
+    id: version
+    attributes:
+      label: アプリのバージョン
+      description: 画面のバージョン表記を書いてください。
+      placeholder: "0.2.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: OS
+      options:
+        - macOS（Apple Silicon）
+        - macOS（Intel）
+        - Windows
+        - Linux
+    validations:
+      required: true
+  - type: input
+    id: os_version
+    attributes:
+      label: OS のバージョン
+      placeholder: "macOS 15.5、Windows 11 24H2 など"
+  - type: dropdown
+    id: device
+    attributes:
+      label: 入力
+      options:
+        - RTL-SDR
+        - HackRF One
+        - 録音済みのファイル
+        - 関係しない・わからない
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 再現の手順
+      description: 何をしたら起きたかを、順に書いてください。
+      placeholder: |
+        1. プリセット「JR東基地局」を選ぶ
+        2. 受信を始める
+        3. …
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 起きたこと
+      description: エラーの文言があれば、そのまま貼ってください。画面の写しも添えられます。
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待した動き
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: 起きる頻度
+      options:
+        - 毎回
+        - ときどき
+        - 一度だけ
